@@ -1,9 +1,9 @@
-const express=require('express');
+const express = require('express');
 const {UserModel} = require('../model/User.model');
 const bcrypt=require('bcrypt');
 const jwt=require("jsonwebtoken");
 const user=express.Router();
-
+const BASE_URL = process.env.BASE_URL;
 
 // login
 user.post('/login',async(req,res)=>{
